@@ -6,6 +6,7 @@
   z-index: 1000;
   transition: all 0.3s ease;
   background: transparent;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .navbar-scrolled {
