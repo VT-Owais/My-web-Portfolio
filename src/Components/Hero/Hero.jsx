@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, ArrowDown } from 'lucide-react';
+import { Github, Linkedin, Mail, ArrowDown, Code, React, Figma, Cpu } from 'lucide-react';
 import Button from '../ui/Button';
 import './Hero.css';
 
@@ -27,7 +27,7 @@ const Hero = () => {
 
       <div className="hero-container">
         <div className="hero-content">
-          {/* Left Content */}
+          {/* Left Content - Text */}
           <div className={`hero-text ${isVisible ? 'fade-in' : ''}`}>
             <div className="availability-badge">
               <span>Available for Opportunities</span>
@@ -89,14 +89,28 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Content - Profile Image */}
+          {/* Right Content - Profile Image with Floating Icons */}
           <div className={`hero-image ${isVisible ? 'slide-in' : ''}`}>
             <div className="image-container">
               <div className="image-glow"></div>
+              
+              {/* Floating Icons */}
+              <div className="floating-icon icon-1">
+                <Code className="floating-icon-svg" />
+              </div>
+              <div className="floating-icon icon-2">
+                <React className="floating-icon-svg" />
+              </div>
+              <div className="floating-icon icon-3">
+                <Figma className="floating-icon-svg" />
+              </div>
+              <div className="floating-icon icon-4">
+                <Cpu className="floating-icon-svg" />
+              </div>
+              
               <div className="profile-image">
-                {/* Add your image here - for now using placeholder */}
                 <div className="image-placeholder">
-                  <span><img src="../src/assets/Images/Mine-image.jpeg" alt="" /></span>
+                  <img src="../src/assets/Images/Mine-image.jpeg" alt="Mohammed Owais" />
                 </div>
               </div>
             </div>
