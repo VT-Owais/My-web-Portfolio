@@ -1,69 +1,66 @@
-import { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, ArrowDown, Code, React, Figma, Cpu } from 'lucide-react';
+import { Github, Linkedin, Mail, ArrowDown } from 'lucide-react';
 import Button from '../ui/Button';
 import './Hero.css';
 
 const Hero = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
     <section id="home" className="hero-section">
-      {/* Animated Background */}
+      {/* Background Elements */}
       <div className="hero-background">
-        <div className="gradient-circle top-left"></div>
-        <div className="gradient-circle bottom-right"></div>
+        <div className="background-glow top-glow"></div>
+        <div className="background-glow bottom-glow"></div>
       </div>
 
       <div className="hero-container">
-        <div className="hero-content">
-          {/* Left Content - Text */}
-          <div className={`hero-text ${isVisible ? 'fade-in' : ''}`}>
+        <div className="hero-content-wrapper">
+          {/* Left Content */}
+          <div className="hero-left-content">
+            {/* Availability Badge */}
             <div className="availability-badge">
-              <span>Available for Opportunities</span>
+              <span className="badge-text">Available for Opportunities</span>
             </div>
             
+            {/* Main Heading */}
             <h1 className="hero-title">
-              Hi, I'm <span className="text-primary">Mohammed Owais</span>
+              Hi, I'm <span className="title-highlight">Mohammed Owais</span>
             </h1>
             
+            {/* Subheading */}
             <h2 className="hero-subtitle">
               Front-End Developer
             </h2>
             
+            {/* Description */}
             <p className="hero-description">
               Turning ideas into seamless web experiences. Passionate about crafting responsive, 
               user-friendly applications with modern technologies.
             </p>
 
+            {/* Buttons */}
             <div className="hero-buttons">
               <Button 
-                onClick={() => scrollToSection("portfolio")}
-                variant="default"
-                className="hero-btn primary"
+                onClick={() => scrollToSection('portfolio')}
+                className="btn-primary"
               >
                 View Portfolio
               </Button>
               <Button 
-                onClick={() => scrollToSection("contact")}
-                variant="outline"
-                className="hero-btn outline"
+                onClick={() => scrollToSection('contact')}
+                className="btn-secondary"
               >
                 Hire Me
               </Button>
             </div>
 
-            <div className="hero-social">
+            {/* Social Links */}
+            <div className="social-links">
               <a 
                 href="https://github.com/VT-Owais" 
                 target="_blank" 
@@ -89,29 +86,30 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Content - Profile Image with Floating Icons */}
-          <div className={`hero-image ${isVisible ? 'slide-in' : ''}`}>
-            <div className="image-container">
+          {/* Right Content - Profile Image */}
+          <div className="hero-right-content">
+            <div className="profile-image-container">
+              {/* Background Glow */}
               <div className="image-glow"></div>
               
-              {/* Floating Icons */}
-              <div className="floating-icon icon-1">
-                <Code className="floating-icon-svg" />
-              </div>
-              <div className="floating-icon icon-2">
-                <React className="floating-icon-svg" />
-              </div>
-              <div className="floating-icon icon-3">
-                <Figma className="floating-icon-svg" />
-              </div>
-              <div className="floating-icon icon-4">
-                <Cpu className="floating-icon-svg" />
+              {/* Main Profile Image Container */}
+              <div className="profile-image-wrapper">
+                <img 
+                  src="../src/assets/Images/Mine-image.jpeg" 
+                  alt="Mohammed Owais Farhan V T" 
+                  className="profile-image"
+                />
               </div>
               
-              <div className="profile-image">
-                <div className="image-placeholder">
-                  <img src="../src/assets/Images/Mine-image.jpeg" alt="Mohammed Owais" />
-                </div>
+              {/* Floating Elements */}
+              <div className="floating-element element-1">
+                <span className="element-icon">⚛️</span>
+              </div>
+              <div className="floating-element element-2">
+                <span className="element-icon">💻</span>
+              </div>
+              <div className="floating-element element-3">
+                <span className="element-icon">🎨</span>
               </div>
             </div>
           </div>
@@ -119,7 +117,7 @@ const Hero = () => {
 
         {/* Scroll Indicator */}
         <div className="scroll-indicator">
-          <ArrowDown className="scroll-arrow" />
+          <ArrowDown className="scroll-icon" />
         </div>
       </div>
     </section>
