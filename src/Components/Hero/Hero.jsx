@@ -1,5 +1,6 @@
 import { Github, Linkedin, Mail, ArrowDown } from 'lucide-react';
 import Button from '../ui/Button';
+import profileImage from '../../assets/Images/Mine-image.jpeg';
 import './Hero.css';
 
 const Hero = () => {
@@ -95,7 +96,7 @@ const Hero = () => {
               {/* Main Profile Image Container */}
               <div className="profile-image-wrapper">
                 <img 
-                  src="../src/assets/Images/Mine-image.jpeg" 
+                  src={profileImage} 
                   alt="Mohammed Owais Farhan V T" 
                   className="profile-image"
                 />
