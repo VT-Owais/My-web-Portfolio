@@ -323,7 +323,7 @@
 }
 
 .element-1 {
-  top: -1rem;
+  top: 1rem;
   left: -1rem;
   animation-delay: 0s;
 }
@@ -356,7 +356,11 @@
   font-size: 1.5rem;
   filter: drop-shadow(0 0 8px rgba(0, 217, 255, 0.5));
 }
-
+.element-icon img{
+  width: 40px;
+    position: relative;
+    top: 0.2rem;
+}
 /* Scroll Indicator */
 .scroll-indicator {
   position: absolute;

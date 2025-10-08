@@ -17,7 +17,7 @@ const Projects = () => {
         "Product filtering and search"
       ],
       projectLink: "#",
-      codeLink: "#"
+      codeLink: "https://github.com/VT-Owais/WiseStep"
     },
     {
       title: "AI Chef Recipe Generator",
@@ -31,7 +31,7 @@ const Projects = () => {
         "Ingredient-based filtering"
       ],
       projectLink: "#",
-      codeLink: "#"
+      codeLink: "https://github.com/VT-Owais/AI-Chef"
     }
   ];
 
@@ -41,28 +41,28 @@ const Projects = () => {
       description: "A modern task management application with add, edit, delete, and filter functionality.",
       tags: ["React.js", "CSS", "Local Storage"],
       projectLink: "#",
-      codeLink: "#"
+      codeLink: "https://github.com/VT-Owais/Do-it-To-do-list-"
     },
     {
       title: "Snake Game",
       description: "Classic snake game with score tracking, increasing difficulty, and responsive controls.",
       tags: ["JavaScript", "HTML5", "CSS3"],
       projectLink: "#",
-      codeLink: "#"
+      codeLink: "https://github.com/VT-Owais/Snake-Game"
     },
     {
       title: "Stone Paper Scissors",
       description: "Interactive game with computer opponent, score tracking, and animated results.",
       tags: ["JavaScript", "HTML", "CSS"],
       projectLink: "#",
-      codeLink: "#"
+      codeLink: "https://github.com/VT-Owais/stone-paper-scissors-js-game"
     },
     {
       title: "Calculator",
       description: "Fully functional calculator with basic arithmetic operations and responsive design.",
       tags: ["JavaScript", "HTML", "CSS"],
       projectLink: "#",
-      codeLink: "#"
+      codeLink: "https://github.com/VT-Owais/Calculator-js"
     }
   ];
 
@@ -128,6 +128,7 @@ const Projects = () => {
                     variant="default"
                     size="sm"
                     className="project-btn primary"
+                    onClick={() => window.open(project.projectLink, '_blank')}
                   >
                     <ExternalLink className="btn-icon" />
                     View Project
@@ -136,6 +137,7 @@ const Projects = () => {
                     variant="outline"
                     size="sm"
                     className="project-btn secondary"
+                    onClick={() => window.open(project.codeLink, '_blank')}
                   >
                     <Github className="btn-icon" />
                     View Code
@@ -182,6 +184,7 @@ const Projects = () => {
                     variant="default"
                     size="sm"
                     className="mini-project-btn primary"
+                    onClick={() => window.open(project.projectLink, '_blank')}
                   >
                     <ExternalLink className="btn-icon" />
                     View Project
@@ -190,6 +193,7 @@ const Projects = () => {
                     variant="outline"
                     size="sm"
                     className="mini-project-btn secondary"
+                    onClick={() => window.open(project.codeLink, '_blank')}
                   >
                     <Github className="btn-icon" />
                     Code

@@ -1,14 +1,21 @@
 import { Github, Linkedin, Mail, ArrowDown } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import Button from '../ui/Button';
 import profileImage from '../../assets/Images/Mine-image.jpeg';
 import './Hero.css';
 
 const Hero = () => {
+  const navigate = useNavigate();
+
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const handleProjectsClick = () => {
+    navigate('/projects');
   };
 
   return (
@@ -47,10 +54,10 @@ const Hero = () => {
             {/* Buttons */}
             <div className="hero-buttons">
               <Button 
-                onClick={() => scrollToSection('portfolio')}
+                onClick={handleProjectsClick}
                 className="btn-primary"
               >
-                View Portfolio
+                My Projects
               </Button>
               <Button 
                 onClick={() => scrollToSection('contact')}
@@ -104,7 +111,9 @@ const Hero = () => {
               
               {/* Floating Elements */}
               <div className="floating-element element-1">
-                <span className="element-icon">⚛️</span>
+                <span className="element-icon">
+                  <img src="../src/assets/Images/react-icon.png" alt="" />
+                </span>
               </div>
               <div className="floating-element element-2">
                 <span className="element-icon">💻</span>
@@ -112,6 +121,7 @@ const Hero = () => {
               <div className="floating-element element-3">
                 <span className="element-icon">🎨</span>
               </div>
+              
             </div>
           </div>
         </div>
