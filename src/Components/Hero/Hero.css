@@ -375,7 +375,7 @@
 }
 @media (max-width: 767px) {
   .scroll-indicator {
-    bottom: -1rem;
+    bottom: -2rem;
   }
 }
 
