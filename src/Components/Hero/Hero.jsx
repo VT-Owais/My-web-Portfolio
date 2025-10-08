@@ -2,6 +2,7 @@ import { Github, Linkedin, Mail, ArrowDown } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import Button from '../ui/Button';
 import profileImage from '../../assets/Images/Mine-image.jpeg';
+import reactIcon from '../../assets/Images/react-icon.png';
 import './Hero.css';
 
 const Hero = () => {
@@ -34,32 +35,32 @@ const Hero = () => {
             <div className="availability-badge">
               <span className="badge-text">Available for Opportunities</span>
             </div>
-            
+
             {/* Main Heading */}
             <h1 className="hero-title">
               Hi, I'm <span className="title-highlight">Mohammed Owais</span>
             </h1>
-            
+
             {/* Subheading */}
             <h2 className="hero-subtitle">
               Front-End Developer
             </h2>
-            
+
             {/* Description */}
             <p className="hero-description">
-              Turning ideas into seamless web experiences. Passionate about crafting responsive, 
+              Turning ideas into seamless web experiences. Passionate about crafting responsive,
               user-friendly applications with modern technologies.
             </p>
 
             {/* Buttons */}
             <div className="hero-buttons">
-              <Button 
+              <Button
                 onClick={handleProjectsClick}
                 className="btn-primary"
               >
                 My Projects
               </Button>
-              <Button 
+              <Button
                 onClick={() => scrollToSection('contact')}
                 className="btn-secondary"
               >
@@ -69,23 +70,23 @@ const Hero = () => {
 
             {/* Social Links */}
             <div className="social-links">
-              <a 
-                href="https://github.com/VT-Owais" 
-                target="_blank" 
+              <a
+                href="https://github.com/VT-Owais"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="social-link"
               >
                 <Github className="social-icon" />
               </a>
-              <a 
-                href="https://linkedin.com/in/mohammed-owais-farhan-v-t-76012721a" 
-                target="_blank" 
+              <a
+                href="https://linkedin.com/in/mohammed-owais-farhan-v-t-76012721a"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="social-link"
               >
                 <Linkedin className="social-icon" />
               </a>
-              <a 
+              <a
                 href="mailto:vtowais786@gmail.com"
                 className="social-link"
               >
@@ -99,21 +100,22 @@ const Hero = () => {
             <div className="profile-image-container">
               {/* Background Glow */}
               <div className="image-glow"></div>
-              
+
               {/* Main Profile Image Container */}
               <div className="profile-image-wrapper">
-                <img 
-                  src={profileImage} 
-                  alt="Mohammed Owais Farhan V T" 
+                <img
+                  src={profileImage}
+                  alt="Mohammed Owais Farhan V T"
                   className="profile-image"
                 />
               </div>
-              
+
               {/* Floating Elements */}
               <div className="floating-element element-1">
                 <span className="element-icon">
-                  <img src="../src/assets/Images/react-icon.png" alt="" />
+                  <img src={reactIcon} alt="React" />
                 </span>
+
               </div>
               <div className="floating-element element-2">
                 <span className="element-icon">💻</span>
@@ -121,7 +123,7 @@ const Hero = () => {
               <div className="floating-element element-3">
                 <span className="element-icon">🎨</span>
               </div>
-              
+
             </div>
           </div>
         </div>
