@@ -241,11 +241,13 @@
   flex: 1;
   display: flex;
   justify-content: center;
+  margin-bottom: 2rem; /* Added space below image on mobile */
 }
 
 @media (min-width: 1024px) {
   .hero-right-content {
     justify-content: flex-end;
+    margin-bottom: 0; /* Remove margin on desktop */
   }
 }
 
@@ -356,10 +358,11 @@
   font-size: 1.5rem;
   filter: drop-shadow(0 0 8px rgba(0, 217, 255, 0.5));
 }
+
 .element-icon img{
   width: 40px;
-    position: relative;
-    top: 0.2rem;
+  position: relative;
+  top: 0.2rem;
 }
 
 /* Scroll Indicator */
@@ -415,13 +418,113 @@
   animation: glowPulse 3s ease-in-out infinite alternate;
 }
 
-/* For mobile, adjust the glow position */
-@media (max-width: 1023px) {
+/* Mobile Responsive Fixes */
+@media (max-width: 767px) {
+  .hero-section {
+    padding: 3rem 0 2rem;
+    min-height: 90vh;
+  }
+
+  .hero-right-content {
+    margin-bottom: 3rem; /* Added more space below image on mobile */
+  }
+
+  /* Fix floating icons positioning on mobile */
+  .floating-element {
+    width: 3rem;
+    height: 3rem;
+    z-index: 3;
+  }
+
+  .element-1 {
+    top: 0.5rem;
+    left: -0.5rem;
+  }
+
+  .element-2 {
+    bottom: 1rem;
+    right: -0.5rem;
+  }
+
+  .element-3 {
+    top: 45%;
+    right: -1rem;
+  }
+
+  .element-icon img {
+    width: 30px;
+  }
+
+  /* Adjust glow position for mobile */
   .hero-right-content::before {
-    top: -1rem;
-    right: 1rem;
+    top: -4rem;
+    right: -2rem;
     width: 8rem;
     height: 8rem;
     opacity: 0.15;
+  }
+
+  /* Adjust profile image size for mobile */
+  .profile-image-wrapper {
+    width: 14rem;
+    height: 14rem;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 180px;
+  }
+}
+
+/* Tablet Responsive */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .profile-image-wrapper {
+    width: 16rem;
+    height: 16rem;
+  }
+
+  .hero-content-wrapper {
+    gap: 2rem;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-description {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-social {
+    justify-content: center;
+  }
+
+  .floating-element {
+    width: 3.5rem;
+    height: 3.5rem;
   }
 }
