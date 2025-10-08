@@ -373,6 +373,11 @@
   transform: translateX(-50%);
   animation: bounce 2s infinite;
 }
+@media (max-width: 767px) {
+  .scroll-indicator {
+    bottom: -1rem;
+  }
+}
 
 .scroll-icon {
   width: 1.5rem;
